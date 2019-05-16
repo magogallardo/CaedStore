@@ -25,7 +25,7 @@ SECRET_KEY = '+cq%wzgh@=79(yhlg0e_&8_#g%_j_th6yjz7ujn^quq()ti0k!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['caed.mysql.database.azure.com', '127.0.0.1']
 
 
 # Application definition
@@ -80,10 +80,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'NAME': 'store',
-        'USER': 'root',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
-        'PORT':'8000'
+        'USER': 'mago@caed',
+        'PASSWORD': 'Abc12345678',
+        'HOST': 'caed.mysql.database.azure.com',
+        'PORT':''
 
     }
 }
@@ -113,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
