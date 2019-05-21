@@ -25,12 +25,13 @@ SECRET_KEY = '+cq%wzgh@=79(yhlg0e_&8_#g%_j_th6yjz7ujn^quq()ti0k!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['caed.mysql.database.azure.com', '127.0.0.1']
+ALLOWED_HOSTS = ['caed.mysql.database.azure.com', '127.0.0.1', 'https://caedstore.azurewebsites.net']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
     'store2.apps.Store2Config',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+CRISPY_TEMPLATE_PACK = 'boostrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

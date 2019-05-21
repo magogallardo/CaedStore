@@ -18,6 +18,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^Start/', admin.site.urls),
     url(r'^store2/', include('store2.urls')),
+
 ]
