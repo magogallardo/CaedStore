@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['caed.mysql.database.azure.com', '127.0.0.1', 'https://caedstor
 # Application definition
 
 INSTALLED_APPS = [
-    'crispy_forms',
     'store2.apps.Store2Config',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -128,3 +127,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS=(
+    os.path.join(BASE_DIR, 'static'),
+    "/store2/static/store2/"
+)

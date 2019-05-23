@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regístrate | Caed Store</title>
+	<link rel="stylesheet" href="{% static 'store2/main_background_style.css' %}">
+
+</head>
+
+
+<body>
+
+	<header style="background-color: #f2f2f1; background: #cccc;">
+		<h1 style="color: blue;">¡Regístrate! Es gratis</h1>
+		<form>
+			
+			<input type="text" name="name" value = "Ingresa tu nombre"> <br><br>
+			<input type="text" name="last_name" value = "Ingresa tu apellido"><br><br>
+			<input type="text" name="email" value = "Ingresa tu correo electrónico"> <br><br>
+			<input type="text" name="phone" value = "Ingresa tu teléfono (10 dígitos)"> <br><br>
+			<input type="text" name="user_name" value = "Ingresa tu usuario"> <br><br>
+			<p>Ingresa una contraseña</p>
+			<input type="password" name="psw"><br>
+			<p>Confirma tu contraseña</p>
+			<input type="password" name="psw"><br><br><br>
+			<input type="submit" name="singupButton" value="Acceder"><br>
+	
+		</form>
+		<a href="/store/login">¿Ya tienes una cuenta? Accede ahora</a> <br><br>
+
+
+
+	</header>
+	
+</body>
+
+</html>

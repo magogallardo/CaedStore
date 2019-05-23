@@ -13,6 +13,7 @@ CREATE TABLE user
  	phone NVARCHAR(14) NOT NULL,
  	user_name NVARCHAR(15) NOT NULL,
  	password NVARCHAR(15) NOT NULL,
+    user_image LONGBLOB NOT NULL
     PRIMARY KEY(user_id)
 );
 

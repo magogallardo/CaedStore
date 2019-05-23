@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ingresa | Caed Store</title>
+	<link rel="stylesheet" href="{% static 'store2/main_background_style.css' %}">
+
+</head>
+
+
+<body>
+
+	<header style="background-color: #f2f2f1; background: #cccc;">
+		<form>
+			
+			<h1 style="color: blue">Ingresa</h1>
+			<input type="text" name="user" value = "Usuario"> <br>
+			<input type="text" name="psw" value="Contraseña"><br>
+			<a href="#">¿Olvidaste tu contraseña?</a><br><br>
+			<input type="submit" name="loginButton" value="Acceder"><br>
+	
+			<a href="/store/singup">¿Aún no tienes una cuenta? ¡Regístrate!</a><br><br>
+
+		</form>
+
+
+	</header>
+	
+</body>
+
+</html>

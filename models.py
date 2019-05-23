@@ -8,7 +8,6 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.db.models.signals import post_save
 
 
 class Address(models.Model):
@@ -187,7 +186,7 @@ class Image(models.Model):
 
 class Item(models.Model):
     item_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=15)
     descr = models.CharField(max_length=50)
     brand = models.CharField(max_length=50)
     pieces = models.CharField(max_length=50)
@@ -195,8 +194,6 @@ class Item(models.Model):
     quantity = models.CharField(max_length=50)
     price = models.CharField(max_length=10)
     discount = models.CharField(max_length=4)
-    def __str__(self):
-        return self.name
 
     class Meta:
         managed = False
@@ -247,11 +244,9 @@ class User(models.Model):
     name = models.CharField(max_length=15)
     last_name = models.CharField(max_length=15)
     email = models.CharField(max_length=50)
-    phone = models.CharField(max_length=10)
-    user_name = models.CharField(max_length=30)
-    password = models.CharField(max_length=20)
-    def __str__(self):
-        return self.user_name
+    phone = models.CharField(max_length=14)
+    user_name = models.CharField(max_length=15)
+    password = models.CharField(max_length=15)
 
     class Meta:
         managed = False

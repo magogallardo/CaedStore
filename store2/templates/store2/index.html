@@ -1,0 +1,101 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Caed Store</title>
+	<link rel="stylesheet" href="{% static 'store2/main_background_style.css' %}">
+</head>
+
+
+<body>
+	<header style="background-color: #555">
+		<h4>
+			
+		</h4>
+		
+	</header>
+
+
+	<section>
+	<nav style="height: 15px">
+		<u>
+			Caed Store
+		</u>
+	</nav>
+	<article style="text-align: center">
+		<form>
+			<input type="tetx" name="search_text" value ="Buscar">
+			<input type="submit" name="search" value ="Ok">
+		</form>
+	</article>
+	<nav>
+		<u>
+			<a href="/store/login">Iniciar sesión</a><br>
+			<a href="/store/singup">Regístrate</a>
+		</u>
+	</nav>
+	<br>
+	<article style="width: 100%">
+
+		<input type="submit" name="categories" value="Categorías">
+		<a href="#">Libretas</a>
+		<a href="#">Camisas</a>
+		<a href="#">Articulos</a>
+		<a href="#">Accesorios</a>
+		<a href="#">Separadores</a>
+		
+	</article>
+
+	<article style="width: 100%">
+		
+		{% if recent_items_list %}
+		<p>Artículos recientemente añadidos</p>
+			{% for item in recent_items_list %}
+				{% if item.quantity > 0 %}
+			  <a href="/store/detail/{{ item.item_id }}/">{{item.name}}</a>
+				{% endif %}
+			{% endfor %}
+		{% else %}
+			<p>No hay items disponibles</p>
+		{%endif%}
+
+	</article>
+
+	<article style="width: 100%">
+		
+		<p>Artículos recomendados</p>
+		{% if recomended_items_list %}
+			{% for item in recent_items_list %}
+				{% if item.quantity > 0 %}
+			  <a href="/store/detail/{{ item.item_id }}/">{{item.name}}</a>
+				{% endif %}
+			{% endfor %}
+		{% else %}
+			<p>	No hay items disponibles</p>
+		{%endif%}
+
+	</article>
+
+
+
+	
+	</section>
+
+	<footer>
+  	<li><a href="/store/about">Caed Bordados</a></li>
+  	<li><a href="/store/FAQ">FAQ</a></li>
+
+  	<small>2019 - Caed Bordados</small>
+
+	</footer>
+	
+
+
+</body>
+</html>
